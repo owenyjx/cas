@@ -46,9 +46,9 @@ for zip1,zip2 in zip(enumerate(data_loader),enumerate(data_loader2)):
 		print("correct number:",int(correct_sum[0]),"accuracy:",float(correct_sum[0]/j))
 		print("failed attacked number:",correct_sum.view(255))
 		print("out of range:",large_range)
-	if j < 10000:
+	if j < 30000:
 		continue
-	if j == 20000:
+	if j == 40000:
 		break
 	cln_data, true_label = data
 	cln_data, true_label = cln_data.to(device), true_label.to(device)
